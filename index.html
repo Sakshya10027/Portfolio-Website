@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sakshya Patel — Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Nav -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">Sakshya<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+          <button id="theme-toggle" aria-label="Toggle dark mode">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+          </button>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#education" class="mobile-link">Education</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid-lines"></div>
+      <div class="hero-content">
+        <div class="hero-label">Available for opportunities</div>
+        <h1 class="hero-name">Sakshya<em>Patel.</em></h1>
+        <p class="hero-tagline">
+          Full Stack Developer crafting scalable digital experiences that live
+          at the intersection of clean code and thoughtful design.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">View My Work</a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <div class="section-header reveal">
+              <p class="section-label">Who I Am</p>
+              <h2 class="section-title">
+                Building what<br /><em>matters most</em>
+              </h2>
+            </div>
+            <div class="about-text reveal reveal-delay-1">
+              <p>
+                I'm a <strong>Full Stack Developer</strong> with a strong
+                foundation in the MERN stack, focused on building fast, scalable
+                applications backed by clean architecture and sharp UI/UX
+                sensibilities.
+              </p>
+              <p>
+                Currently pursuing my B.Tech in Computer Science at VIT Bhopal,
+                I balance academic excellence with hands-on project work — from
+                real-time systems to full-stack marketplace platforms.
+              </p>
+              <p>
+                When I'm not writing code, I lead technical initiatives at the
+                VR & Gaming Club and sharpen my problem-solving with 250+ DSA
+                challenges on LeetCode.
+              </p>
+            </div>
+            <div class="about-stats reveal reveal-delay-2">
+              <div class="stat-card">
+                <span class="stat-num">250+</span>
+                <span class="stat-label">LeetCode Problems</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">8.22</span>
+                <span class="stat-label">CGPA</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">3+</span>
+                <span class="stat-label">Full-Stack Projects</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">1+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image-side reveal reveal-delay-2">
+            <div class="about-card">
+              <h3 class="about-card-title">Quick Profile</h3>
+              <div class="info-row">
+                <span class="info-label">Role</span>
+                <span class="info-value">Full Stack Developer</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Location</span>
+                <span class="info-value">Lucknow, Uttar Pradesh, India</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Email</span>
+                <span class="info-value"
+                  ><a href="mailto:patelsakshya2@gmail.com"
+                    >patelsakshya2@gmail.com</a
+                  ></span
+                >
+              </div>
+              <div class="info-row">
+                <span class="info-label">GitHub</span>
+                <span class="info-value"
+                  ><a href="https://github.com/Sakshya10027" target="_blank"
+                    >Sakshya10027</a
+                  ></span
+                >
+              </div>
+              <div class="info-row">
+                <span class="info-label">LinkedIn</span>
+                <span class="info-value"
+                  ><a
+                    href="https://www.linkedin.com/in/sakshya-patel-20751232a/"
+                    target="_blank"
+                    >sakshya-patel</a
+                  ></span
+                >
+              </div>
+              <div class="info-row">
+                <span class="info-label">Status</span>
+                <span class="info-value" style="color: var(--accent)"
+                  >● Open to Opportunities</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">What I Work With</p>
+          <h2 class="section-title">Skills &<br /><em>Technologies</em></h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category reveal reveal-delay-1">
+            <p class="skill-category-title">Frontend</p>
+            <div class="skill-pills">
+              <span class="skill-pill">React.js</span>
+              <span class="skill-pill">Angular</span>
+              <span class="skill-pill">TailwindCSS</span>
+              <span class="skill-pill">Bootstrap 5</span>
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">EJS</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>React.js</span><span>90%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="90%"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>CSS / Tailwind</span><span>85%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="85%"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>JavaScript</span><span>88%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category reveal reveal-delay-2">
+            <p class="skill-category-title">Backend & Database</p>
+            <div class="skill-pills">
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Express.js</span>
+              <span class="skill-pill">Socket.IO</span>
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">REST APIs</span>
+              <span class="skill-pill">JWT Auth</span>
+              <span class="skill-pill">Passport.js</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Node.js / Express</span><span>85%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="85%"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>MongoDB</span><span>82%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="82%"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Socket.IO</span><span>75%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category reveal reveal-delay-3">
+            <p class="skill-category-title">Languages & Tools</p>
+            <div class="skill-pills">
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">C/C++</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+              <span class="skill-pill">Vercel</span>
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill">VS Code</span>
+            </div>
+            <div class="skill-bars">
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Git / GitHub</span><span>88%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="88%"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Python / C++</span><span>80%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="80%"></div>
+                </div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="skill-bar-label">
+                  <span>Figma / Design</span><span>70%</span>
+                </div>
+                <div class="skill-bar-track">
+                  <div class="skill-bar-fill" data-width="70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Where I've Worked</p>
+          <h2 class="section-title">Work<br /><em>Experience</em></h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <p class="timeline-date">Dec 2025 – Feb 2026</p>
+            <h3 class="timeline-role">Front End Developer</h3>
+            <p class="timeline-company">
+              Uptricks
+              <span class="timeline-type">Virtual Internship</span>
+            </p>
+            <ul class="timeline-bullets">
+              <li>
+                Built responsive and interactive web interfaces using React.js,
+                ensuring cross-browser compatibility and smooth user experience.
+              </li>
+              <li>
+                Developed reusable UI components and integrated RESTful APIs to
+                connect frontend with backend services.
+              </li>
+              <li>
+                Optimized page load performance through code splitting, lazy
+                loading, and efficient state management.
+              </li>
+              <li>
+                Collaborated with design and backend teams in an agile
+                environment to deliver features on schedule.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">What I've Built</p>
+          <h2 class="section-title">Featured<br /><em>Projects</em></h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card reveal reveal-delay-1">
+            <p class="project-num">Project 01</p>
+            <h3 class="project-name">TaskZen — Real-Time Task Manager</h3>
+            <p class="project-desc">
+              A full-stack task management app featuring a Kanban/dashboard UI
+              with real-time notifications, an XP reward system, JWT + Google
+              OAuth authentication, and persistent sessions across devices.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React (Vite)</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">MongoDB</span>
+              <span class="project-tag">Socket.IO</span>
+              <span class="project-tag">JWT</span>
+              <span class="project-tag">TailwindCSS</span>
+            </div>
+            <a href="https://task-zen-three.vercel.app/" class="project-link"
+              >View Project</a
+            >
+          </div>
+          <div class="project-card reveal reveal-delay-2">
+            <p class="project-num">Project 02</p>
+            <h3 class="project-name">Tourora — Travel Marketplace</h3>
+            <p class="project-desc">
+              A full-stack MVC travel marketplace with 6+ REST API routes,
+              role-based authorization, cloud image uploads via Cloudinary,
+              session management, and fully responsive UI with real-time search
+              filtering.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express.js</span>
+              <span class="project-tag">MongoDB</span>
+              <span class="project-tag">EJS</span>
+              <span class="project-tag">Passport.js</span>
+              <span class="project-tag">Cloudinary</span>
+              <span class="project-tag">Bootstrap 5</span>
+            </div>
+            <a href="https://tourora-7dot.onrender.com/" class="project-link"
+              >View Project</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Academic Background</p>
+          <h2 class="section-title">Education &<br /><em>Achievements</em></h2>
+        </div>
+        <div class="education-card reveal">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <h3 class="edu-degree">B.Tech in Computer Science</h3>
+            <p class="edu-school">VIT Bhopal University, Bhopal, M.P.</p>
+            <p class="edu-meta">Sep 2024 – May 2025 (Expected)</p>
+          </div>
+          <div>
+            <div class="edu-cgpa">8.22</div>
+            <div class="edu-cgpa-label">CGPA</div>
+          </div>
+        </div>
+        <div class="extra-cards">
+          <div class="extra-card reveal reveal-delay-1">
+            <div class="extra-icon">🎮</div>
+            <div>
+              <h4 class="extra-title">Tech Lead — VR & Gaming Club</h4>
+              <p class="extra-text">
+                Leading technical initiatives and mentoring fellow members in VR
+                and game development projects at VIT Bhopal.
+              </p>
+            </div>
+          </div>
+          <div class="extra-card reveal reveal-delay-2">
+            <div class="extra-icon">⚡</div>
+            <div>
+              <h4 class="extra-title">250+ DSA Problems Solved</h4>
+              <p class="extra-text">
+                Consistently solving Data Structures and Algorithms challenges
+                on LeetCode, strengthening problem-solving and algorithmic
+                thinking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">Let's Work Together</p>
+          <h2 class="section-title">Get In<br /><em>Touch</em></h2>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <div class="contact-text reveal reveal-delay-1">
+              <p>
+                Whether you have a project in mind, an opportunity to share, or
+                just want to connect — my inbox is always open. I'm especially
+                excited about roles in full-stack development and real-time
+                systems.
+              </p>
+            </div>
+            <div class="contact-links">
+              <a
+                href="mailto:patelsakshya2@gmail.com"
+                class="contact-link reveal reveal-delay-1"
+              >
+                <div class="contact-link-icon">✉</div>
+                <div class="contact-link-content">
+                  <span class="contact-link-label">Email</span>
+                  <span class="contact-link-value"
+                    >patelsakshya2@gmail.com</span
+                  >
+                </div>
+                <span class="contact-link-arrow">↗</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sakshya-patel-20751232a/"
+                target="_blank"
+                class="contact-link reveal reveal-delay-2"
+              >
+                <div class="contact-link-icon">in</div>
+                <div class="contact-link-content">
+                  <span class="contact-link-label">LinkedIn</span>
+                  <span class="contact-link-value">sakshya-patel</span>
+                </div>
+                <span class="contact-link-arrow">↗</span>
+              </a>
+              <a
+                href="https://github.com/Sakshya10027"
+                target="_blank"
+                class="contact-link reveal reveal-delay-3"
+              >
+                <div class="contact-link-icon">⌥</div>
+                <div class="contact-link-content">
+                  <span class="contact-link-label">GitHub</span>
+                  <span class="contact-link-value">Sakshya10027</span>
+                </div>
+                <span class="contact-link-arrow">↗</span>
+              </a>
+              <a
+                href="tel:+919696053006"
+                class="contact-link reveal reveal-delay-4"
+              >
+                <div class="contact-link-icon">✆</div>
+                <div class="contact-link-content">
+                  <span class="contact-link-label">Phone</span>
+                  <span class="contact-link-value">+91 9696053006</span>
+                </div>
+                <span class="contact-link-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-cta-side reveal reveal-delay-2">
+            <div class="contact-big-text">
+              Let's build<br />something<br /><em>great.</em>
+            </div>
+            <a href="mailto:patelsakshya2@gmail.com" class="btn-light"
+              >Send Me a Message →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Designed & built by Sakshya Patel &nbsp;·&nbsp; Lucknow, India
+        &nbsp;·&nbsp; 2026
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
