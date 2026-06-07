@@ -866,6 +866,11 @@ nav.scrolled {
   color: var(--warm-gray);
   font-family: var(--font-mono);
 }
+.project-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: auto;
+}
 .project-link {
   display: inline-flex;
   align-items: center;
@@ -877,7 +882,6 @@ nav.scrolled {
   color: var(--ink);
   text-decoration: none;
   transition: color 0.3s;
-  align-self: flex-start;
 }
 .project-link::after {
   content: "↗";
