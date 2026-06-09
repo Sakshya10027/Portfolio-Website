@@ -1,11 +1,94 @@
-const themeToggle = document.getElementById("theme-toggle");
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  const logsContainer = document.getElementById("terminal-logs");
+  const binaryName = document.getElementById("binary-name");
+  const statusProgress = preloader.querySelector(".status-progress");
+  const initBtn = document.getElementById("init-btn");
+  
+  const logs = [
+    "> kernel.init(sakshya_patel)...",
+    "> loading_modules: [MERN, DSA, UI_UX]",
+    "> fetching_experience_data... DONE",
+    "> calibrating_visual_engine... 85%",
+    "> secure_connection_established: lucknow.in",
+    "> system_ready: true"
+  ];
+
+  const finalName = "Sakshya Patel.";
+  const chars = "0101010101010101";
+  
+  let logIndex = 0;
+  let progress = 0;
+
+  const typeLogs = () => {
+    if (logIndex < logs.length) {
+      const log = document.createElement("div");
+      log.textContent = logs[logIndex];
+      logsContainer.appendChild(log);
+      logsContainer.scrollTop = logsContainer.scrollHeight;
+      logIndex++;
+      setTimeout(typeLogs, 400);
+    }
+  };
+
+  const scrambleName = () => {
+    let iterations = 0;
+    const interval = setInterval(() => {
+      binaryName.innerText = finalName
+        .split("")
+        .map((char, index) => {
+          if (index < iterations) return finalName[index];
+          return chars[Math.floor(Math.random() * chars.length)];
+        })
+        .join("");
+
+      if (iterations >= finalName.length) {
+        clearInterval(interval);
+        showInitiate();
+      }
+      iterations += 1/3;
+    }, 50);
+  };
+
+  const startProgress = () => {
+    const interval = setInterval(() => {
+      progress += Math.random() * 5;
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(interval);
+        scrambleName();
+      }
+      statusProgress.style.width = `${progress}%`;
+    }, 100);
+  };
+
+  const showInitiate = () => {
+    setTimeout(() => {
+      initBtn.classList.add("visible");
+    }, 500);
+  };
+
+  initBtn.addEventListener("click", () => {
+    preloader.classList.add("exit");
+    
+    setTimeout(() => {
+      document.body.classList.remove("preloader-active");
+      preloader.style.display = "none";
+    }, 800);
+  });
+
+  typeLogs();
+  startProgress();
+});
+
+const themeToggleBtn = document.getElementById("theme-toggle");
 const currentTheme = localStorage.getItem("theme") || "dark";
 
 if (currentTheme === "light") {
   document.documentElement.setAttribute("data-theme", "light");
 }
 
-themeToggle.addEventListener("click", () => {
+themeToggleBtn.addEventListener("click", () => {
   let theme = document.documentElement.getAttribute("data-theme");
   if (theme === "light") {
     theme = "dark";
@@ -15,6 +98,59 @@ themeToggle.addEventListener("click", () => {
     document.documentElement.setAttribute("data-theme", "light");
   }
   localStorage.setItem("theme", theme);
+});
+
+const cursorV2 = document.getElementById("cursor-v2");
+const cursorLabel = document.getElementById("cursor-label");
+
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+const lerp = (start, end, amt) => (1 - amt) * start + amt * end;
+
+const animateCursor = () => {
+  cursorX = lerp(cursorX, mouseX, 0.15);
+  cursorY = lerp(cursorY, mouseY, 0.15);
+  
+  cursorV2.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
+  requestAnimationFrame(animateCursor);
+};
+animateCursor();
+
+document.querySelectorAll("a, button, .skill-pill, .stat-card").forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    cursorV2.classList.add("link-hover");
+  });
+  el.addEventListener("mouseleave", () => {
+    cursorV2.classList.remove("link-hover");
+  });
+});
+
+document.querySelectorAll(".project-card").forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    cursorV2.classList.add("project-hover");
+    cursorLabel.textContent = "VIEW PROJECT";
+  });
+  el.addEventListener("mouseleave", () => {
+    cursorV2.classList.remove("project-hover");
+    cursorLabel.textContent = "EXPLORE";
+  });
+});
+
+document.querySelectorAll(".cert-card, .contact-link").forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    cursorV2.classList.add("active");
+    cursorLabel.textContent = "OPEN";
+  });
+  el.addEventListener("mouseleave", () => {
+    cursorV2.classList.remove("active");
+    cursorLabel.textContent = "EXPLORE";
+  });
 });
 
 const backToTop = document.getElementById("back-to-top");
@@ -29,25 +165,7 @@ backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-const cursor = document.getElementById("cursor");
-const ring = document.getElementById("cursor-ring");
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-  ring.style.left = e.clientX + "px";
-  ring.style.top = e.clientY + "px";
-});
-document
-  .querySelectorAll("a, button, .skill-pill, .project-card, .stat-card")
-  .forEach((el) => {
-    el.addEventListener("mouseenter", () => ring.classList.add("expand"));
-    el.addEventListener("mouseleave", () => ring.classList.remove("expand"));
-  });
-
 const navbar = document.getElementById("navbar");
-window.addEventListener("scroll", () => {
-  navbar.classList.toggle("scrolled", window.scrollY > 40);
-});
 
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobile-menu");
@@ -68,7 +186,6 @@ const observer = new IntersectionObserver(
     entries.forEach((e) => {
       if (e.isIntersecting) {
         e.target.classList.add("visible");
-        // Skill bars
         e.target.querySelectorAll(".skill-bar-fill").forEach((bar) => {
           bar.style.width = bar.dataset.width;
         });
@@ -91,14 +208,12 @@ document.querySelectorAll(".skill-bar-fill").forEach((bar) => {
   parentObserver.observe(bar.closest(".skill-category"));
 });
 
-// Robust Audio Context approach for meme sounds
 const memeSounds = [
   "https://www.myinstants.com/media/sounds/vine-boom.mp3",
   "https://www.myinstants.com/media/sounds/discord-notification.mp3",
   "https://www.myinstants.com/media/sounds/error_CD7sEq4.mp3",
 ];
 
-// Pre-create Audio objects
 const audioPool = memeSounds.map((src) => {
   const audio = new Audio(src);
   audio.preload = "auto";
@@ -107,11 +222,9 @@ const audioPool = memeSounds.map((src) => {
 
 document.querySelectorAll(".skill-pill").forEach((pill) => {
   pill.addEventListener("click", () => {
-    // Pick a random sound from the pool
     const randomIndex = Math.floor(Math.random() * audioPool.length);
     const sound = audioPool[randomIndex];
 
-    // Clone and play to allow rapid clicks
     const playInstance = sound.cloneNode();
     playInstance.volume = 0.5;
 
@@ -125,7 +238,6 @@ document.querySelectorAll(".skill-pill").forEach((pill) => {
       });
     }
 
-    // Enhanced visual feedback
     pill.style.backgroundColor = "var(--accent)";
     pill.style.color = "white";
     pill.style.transform = "scale(0.9) rotate(3deg)";
